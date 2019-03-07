@@ -55,7 +55,7 @@
             </objects>
             <point key="canvasLocation" x="39" y="78"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Home-->
         <scene sceneID="XRP-gP-ttA">
             <objects>
                 <tableViewController id="TSz-9Z-6cA" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,7 +78,14 @@
                             <outlet property="delegate" destination="TSz-9Z-6cA" id="pua-Cv-1GF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="vgh-zu-TSO"/>
+                    <navigationItem key="navigationItem" title="Home" id="vgh-zu-TSO">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="euK-cZ-QEh">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="onTapLogout:" destination="TSz-9Z-6cA" id="pHX-ca-4FP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sik-kU-rxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,6 +98,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QNk-Rg-SyA">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.31209748980000002" green="0.61061728000000004" blue="0.93337100740000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="TSz-9Z-6cA" kind="relationship" relationship="rootViewController" id="STZ-ue-9QS"/>
