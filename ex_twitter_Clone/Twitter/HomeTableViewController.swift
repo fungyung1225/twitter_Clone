@@ -18,6 +18,7 @@ class HomeTableViewController: UITableViewController {
     @IBAction func onTapLogout(_ sender: Any) {
         TwitterAPICaller.client?.logout()
         self.dismiss(animated: true, completion: nil)//dismiss the screnn, back to login screen
+        UserDefaults.standard.set(false, forKey: "userLoggedIn")
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
